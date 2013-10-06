@@ -7,7 +7,6 @@ package Core
  */
 object EventEngine {
   def main(args: Array[String]) {
-
     new Setup()
   }
 }
@@ -15,5 +14,6 @@ object EventEngine {
 class Setup {
   TagClassifier("Health", List(
     TagClassifier("Positive Health", List(Tag("Very Healthy"), Tag("Quite Health"))),
-    TagClassifier("Negative Health", List(Tag("RedMist")))))
+    TagClassifier("Negative Health", List(Tag("RedMist"))))
+  )
 }

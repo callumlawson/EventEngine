@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\Event.scala" afterPath="$PROJECT_DIR$/src/OldCore/Event.scala" />
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\EventEngine.scala" afterPath="$PROJECT_DIR$/src/OldCore/EventEngine.scala" />
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\Tag.scala" afterPath="$PROJECT_DIR$/src/OldCore/Tag.scala" />
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\TagHierarchies.scala" afterPath="$PROJECT_DIR$/src/OldCore/TagHierarchies.scala" />
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\TagOps.scala" afterPath="$PROJECT_DIR$/src/OldCore/TagOps.scala" />
-      <change type="MOVED" beforePath="C:\Users\Callum\Programming\EventEngine\src\Core\Timer.scala" afterPath="$PROJECT_DIR$/src/OldCore/Timer.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Core/EventEngine.scala" afterPath="$PROJECT_DIR$/src/Core/EventEngine.scala" />
     </list>
     <ignored path="EventEngine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +17,7 @@
     <file path="/Predicate.scala" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1380398482639" ignored="false" />
     <file path="/fragment.java" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1381089499666" ignored="false" />
     <file path="/a.dummy" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1380552859830" ignored="false" />
-    <file path="/EventEngine.scala" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1381090123014" ignored="false" />
+    <file path="/EventEngine.scala" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1381092527590" ignored="false" />
     <file path="/TagClassifier.scala" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1381089899300" ignored="false" />
     <file path="/TempData.scala" changelist="4356d9e9-efd7-4491-8bf9-0e112c71b2ac" time="1381085012804" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,19 +90,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventEngine.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EventEngine.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Core/EventEngine.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="51" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+            <state line="11" column="5" selection-start="147" selection-end="147" vertical-scroll-proportion="0.2142039">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tag.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tag.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Core/Tag.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="100" selection-end="100" vertical-scroll-proportion="0.23367697">
+            <state line="12" column="31" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -518,8 +512,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -534,7 +528,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20651014" sideWeight="0.7708565" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20651014" sideWeight="0.7708565" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22914349" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -673,16 +667,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/TagClassifier.scala">
+    <entry file="file://$PROJECT_DIR$/src/Core/Tag.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="69" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/EventEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="51" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+        <state line="12" column="31" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -694,9 +681,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Tag.scala">
+    <entry file="file://$PROJECT_DIR$/src/Core/TagClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="100" selection-end="100" vertical-scroll-proportion="0.23367697">
+        <state line="11" column="69" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/EventEngine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="5" selection-start="147" selection-end="147" vertical-scroll-proportion="0.2142039">
           <folding />
         </state>
       </provider>
