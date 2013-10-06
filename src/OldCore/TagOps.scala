@@ -1,7 +1,7 @@
-package Core
+package OldCore
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException
-import Core.OrderedTagCollection
+import OldCore.OrderedTagCollection
 
 /**
  * User: Callum

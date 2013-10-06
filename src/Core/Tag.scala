@@ -1,22 +1,17 @@
 package Core
 
-import scala.collection.mutable.Set
 /**
  * User: Callum
- * Date: 28/09/13
- * Time: 15:06
+ * Date: 06/10/13
+ * Time: 19:29
  */
-class Tag(val tags: Set[Tag]) {
-  def addTag(tag: Tag){
-    tags += tag
-  }
-  def removeTag(tag: Tag) {
-    tags -= tag
-  }
+
+
+
+class Tag(tag: String){
+
 }
 
-class TaglessTag extends Tag(Set()){}
-
-trait OrderedTagCollection extends Tag{
-  def ordering: Seq[Tag]
+object Tag {
+  def apply(tag: String) = new Tag(tag)
 }
