@@ -2,18 +2,16 @@ package Core
 
 /**
  * User: Callum
- * Date: 28/09/13
- * Time: 15:06
+ * Date: 06/10/13
+ * Time: 19:29
  */
-class Tag(var tags: List[Tag]) {
-  def addTag(tag: Tag) {
-    tags = tag :: tags
-  }
-  def removeTag(tag: Tag) {
-    tags = tags.diff(List(tag))
-  }
+
+
+
+class Tag(tag: String){
+
 }
 
-//class DataTag[T](var value: T, tagList: List[Tag]) extends Tag(tagList)
-
-class TaglessTag extends Tag(List())
+object Tag {
+  def apply(tag: String) = new Tag(tag)
+}
