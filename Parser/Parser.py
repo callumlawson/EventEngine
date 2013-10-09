@@ -41,7 +41,8 @@ Tags = [] #The first value of a sublist is the tag type name
 Events = [] #The first value of a sublist is the event name
 World = []
 
-
+"""Global Variables For Error Handling"""
+LineCounter = 0
 
 """Function Definitions ============================================="""
 
@@ -90,25 +91,106 @@ def runParseEvents(folderName):
 
     eventFiles = getFiles(folderName, eventFileExtension)
 
+    for eventFile in eventFiles:
+        parseEventFile(eventFile)
+
 
 """Event file parser"""
-def ParseEventFile(filePath): 
-    print 'Parsing event file here'
+def parseEventFile(filePath): 
+    global Events
+
+    EventName = os.path.basename(filePath)
+    EventName = EventName.partition('.')[0] #Remove the file extension
 
 
-"""World file manager and parser"""
+"""World file manager"""
 def runParseWorld(folderName):
-    print 'Parsing world file here'
+    global World
+    global LineCounter
+
+    LineCounter = 0
+
+    rawTextList = [] #Store the text in a list for easier parsing
+
+    if verbose:
+        print 'Looking for the World File'
+
+    worldFiles = getFiles(folderName, worldFileExtension)
+
+    if (len(worldFiles) > 1):
+        errorHandler('Too Many Worlds')
+
+    else:
+        with open(worldFiles[0], 'r') as worldFile:
+            rawTextList = (line.rstrip() for line in worldFile) #no carriage returns
+            rawTextList = list(line for line in rawTextList if line) #no blank lines
+
+        World = parseWorld(rawTextList,0)
+
+    print World
 
 
+"""World file parser"""
+def parseWorld(TagList,PreviousIndent):
+    global LineCounter
+
+    #If this is empty, get out before recursion eats your soul
+    if TagList == []:
+        return
+
+    ParsedList = []
+
+    LineIndex = 0 #We need to keep track of our position in the list
+
+    while LineIndex < len(TagList):
+
+        LineCounter += 1 #Increment for error handler
+
+        LinesParsed = 1 #Reset
+
+        #Count how far indented we are
+        leading_spaces = len(TagList[LineIndex]) - len(TagList[LineIndex].lstrip())
+
+        if leading_spaces == PreviousIndent: #The tag is on the same level as previously
+            ParsedList.append(TagList[LineIndex].lstrip())
+            LinesParsed = 1
+
+        elif leading_spaces == PreviousIndent + 1: #Subtag of the previous tag
+           
+            #Find how far down the rabbit hole goes
+            while 1:         
+                if (LineIndex + LinesParsed >= len(TagList) - 1): #avoid overflow
+                    break          
+                NextIndent = len(TagList[LineIndex + LinesParsed]) - len(TagList[LineIndex + LinesParsed].lstrip())
+                if NextIndent <= PreviousIndent:
+                    break      
+                LinesParsed += 1
+
+            #construct a sub-list to parse
+            SubTagList = TagList[LineIndex:LineIndex+LinesParsed]
+            #woo recursion
+            ParsedList.append(parseWorld(SubTagList,leading_spaces))
+
+        else:
+            errorHandler('Indent Error in world file, line ' + str(LineCounter))
+
+
+        LineIndex += LinesParsed
+
+    return ParsedList
+
+
+"""Function to generate tag code from data structure"""
 def generateTags():
     return
 
 
+"""Function to generate event code from data structure"""
 def generateEvents():
     return
 
 
+"""Function to generate world code from data structure"""
 def generateWorld():
     return
 	
@@ -137,16 +219,34 @@ def printHelp():
     print '-notags\t\tdon\'t parse tag files'
     print '-noevents\tdon\'t parse event files'
 
+
 """Error Handling Function"""
 def errorHandler(token):
-    if (token == 'No Universe'):
+
+    if 'No Universe' in token:
         if verbose:
             print 'No Universe with that name found. Exiting.\n'
         exit(1)
+
     elif 'Unexpected Symbol' in token:
         if verbose:
             print token
         exit(1)
+
+    elif 'Too Many Worlds' in token:
+        if verbose:
+            print 'Error: Multiple .world files found.'
+        exit(1)
+
+    elif 'Indent Error' in token:
+        if verbose:
+            print token
+        exit(1)
+
+    else:
+        print 'Error: Unhandled Error.'
+        exit(1)
+
 
 
 
