@@ -1,0 +1,10 @@
+Context
+	Room
+	
+Predicates
+	Windows Open
+	Person*Tidy
+	
+Outcome
+	Remove Windows Open
+	Add Windows Closed
