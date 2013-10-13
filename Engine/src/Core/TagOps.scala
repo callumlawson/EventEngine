@@ -8,7 +8,6 @@ import OldCore.{Tag, OrderedTagCollection}
  * Date: 28/09/13
  * Time: 18:51
  */
-
 trait ITagOps{
   def addTag(tagToAdd: Tag)(parent: Tag): Unit
   def removeTag(tagToRemove: Tag)(parent: Tag): Unit

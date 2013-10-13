@@ -5,10 +5,9 @@ package Core
  */
 
 
-object TagTypes {
+object TagClassifiers {
 
   val ANY = "any"
-  
   val TAGS = Set(
 
     TagClassifier("Health", List(
