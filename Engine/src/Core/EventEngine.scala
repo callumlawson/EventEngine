@@ -16,4 +16,8 @@ class Setup {
     TagClassifier("Positive Health", List(Tag("Very Healthy"), Tag("Quite Health"))),
     TagClassifier("Negative Health", List(Tag("RedMist"))))
   )
+
+  TagClassifier("Loyalty", List(Tag("Very loyal"), Tag("Kinda loyal")))
+
+  TagClassifier("Person", List(Tag("Bobby"), Tag("Jason")))
 }
