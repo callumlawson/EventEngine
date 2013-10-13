@@ -12,10 +12,15 @@ object EventEngine {
 }
 
 class Setup {
-  TagClassifier("Health", List(
+  val aTagClassifier = TagClassifier("Health", List(
     TagClassifier("Positive Health", List(Tag("Very Healthy"), Tag("Quite Health"))),
     TagClassifier("Negative Health", List(Tag("RedMist"))))
   )
+
+  val aTag = Tag("bobby")
+
+  if (aTag is "Hungry")
+  if (aTag has "Health")
 
   TagClassifier("Loyalty", List(Tag("Very loyal"), Tag("Kinda loyal")))
 

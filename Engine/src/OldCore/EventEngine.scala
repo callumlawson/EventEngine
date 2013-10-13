@@ -4,6 +4,7 @@ import scala.concurrent.duration._
 import OldCore.PersonalityTag.{WellSpoken, Meddler, Liar}
 import OldCore.Person.{Bobby, Joe}
 import scala.collection.mutable.Set
+import Core.TagOps
 
 /**
  * Created with IntelliJ IDEA.
