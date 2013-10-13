@@ -19,6 +19,9 @@ class Tag(name: String, children: List[Tag]) extends TagClassifier(name, childre
 
   def equals(name : String): Boolean = ???
   def equals(tag : Tag): Boolean = ??? //Reference equality
+
+  def incrementTag(tag: Tag): Option[Tag] = ???
+  def decrementTag(tag: Tag): Option[Tag] = ???
 }
 
 object Tag {

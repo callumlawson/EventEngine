@@ -13,11 +13,10 @@ trait ITagOps{
   def addTag(tagToAdd: Tag)(parent: Tag): Unit
   def removeTag(tagToRemove: Tag)(parent: Tag): Unit
   def hasTag[TagType](parent: Tag): Boolean
-  def applyOpToTagAndChildren(tagOp: ITagOps): Unit
+  def incrementTag(tagToIncrement: Tag)(parent: Tag): Option[Tag] = ???
+  def decrementTag(tag: Tag)(parent: Tag): Option[Tag] = ???
 
-  def incrementTag(tag: Tag): Option[Tag] = ???
-  def decrementTag(tag: Tag): Option[Tag] = ???
-  def parent(tag: Tag): Option[Tag] = ???
+  def applyOpToTagAndChildren(tagOp: ITagOps): Unit
 }
 
 object TagOps extends ITagOps{

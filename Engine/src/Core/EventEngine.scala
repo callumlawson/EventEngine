@@ -1,5 +1,7 @@
 package Core
 
+import Core.Tag
+
 /**
  * User: Callum
  * Date: 06/10/13
@@ -19,8 +21,8 @@ class Setup {
 
   val aTag = Tag("bobby")
 
-  if (aTag is "Hungry")
-  if (aTag has "Health")
+  if (aTag is Tag("Hungry"))
+  if (aTag has Tag("Health"))
 
   TagClassifier("Loyalty", List(Tag("Very loyal"), Tag("Kinda loyal")))
 
